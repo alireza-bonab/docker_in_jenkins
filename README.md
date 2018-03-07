@@ -15,5 +15,15 @@ This is Dockerfile which lets you create container which allows jenkins user ins
 		-p 50000:50000 \
 		--privileged=true \
 		--name jenkins docker_in_jenkins 
+		
+# Test
+to test that jenkins user have access to docker.sock do follow :
+	
+        docker exec -it -u jenkins jenkins bash
+        
+after got bash inside jenkins container :
+	
+        docker info
 
+	
 
