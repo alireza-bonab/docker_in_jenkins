@@ -8,7 +8,7 @@ RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers \
 && grep -vwE "(jenkins)" /etc/passwd > /etc/passwd_bak \
 && echo "jenkins:x:0:0::/var/jenkins_home:/bin/bash" >> /etc/passwd_bak \
 && mv /etc/passwd /etc/passwd.bak \
-&& mv /etc/passwd_bak /etc/passwd \
+&& mv /etc/passwd_bak /etc/passwd 
  
 USER jenkins
 
